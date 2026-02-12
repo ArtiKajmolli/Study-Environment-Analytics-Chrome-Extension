@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Arial; width: 280px; padding: 12px; }
+    .row { margin: 8px 0; display: flex; gap: 8px; flex-wrap: wrap; }
+    button { padding: 8px 10px; cursor: pointer; }
+    select, input { width: 100%; padding: 8px; }
+    .small { font-size: 12px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <h3>Study Environment</h3>
+
+  <div class="row">
+    <label class="small">Environment</label>
+    <select id="env">
+      <option value="library">Library</option>
+      <option value="cafe">Café</option>
+      <option value="park">Park</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label><input type="checkbox" id="audioOn" checked /> Ambient audio</label>
+  </div>
+
+  <div class="row">
+    <button id="start">Start Session</button>
+    <button id="stop">Stop</button>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <input id="presetName" placeholder="Preset name (e.g., Deep Study)" />
+    <input id="durationMin" type="number" min="5" max="180" value="25" />
+    <button id="savePreset">Save Preset</button>
+  </div>
+
+  <div class="row">
+    <button id="openDashboard">Open Dashboard</button>
+  </div>
+
+  <div id="status" class="small"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

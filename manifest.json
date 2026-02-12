@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Study Environment Analytics",
+  "version": "1.0.0",
+  "description": "Tracks focus sessions and simulates study environments with ambient audio.",
+  "permissions": ["tabs", "storage", "idle", "offscreen"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Study Environment",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/audio/*.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
